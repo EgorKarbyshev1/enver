@@ -13,6 +13,27 @@
 </head>
 <body>
     <div class="container">
+        <div class="burger-menu">
+            <div class="burger-menu__content">
+                <img src="./images/cancel_btn.png" alt="" class="burger-menu__btn_close">
+                <input type="text" class="burger-menu__input">
+                <ul class="burger-menu__list">
+                    <li class="burger-menu__item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#">Our Projects</a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="navbar">
             <img src="./images/logo.png" alt="logo">
             <ul class="navbar__list">
@@ -30,6 +51,7 @@
                 </li>
             </ul>
             <input type="text" class="navbar__input">
+            <img src="./images/navbar_btn.png" alt="" class="navbar__btn_burger"/>
         </div>
 
         <header>
@@ -46,7 +68,7 @@
                 </button>
             </div>
             <div class="header__block_right">
-                <img src="./images/header_img.png" alt="header_img">
+                <img class="header__img" src="./images/header_img.png" alt="header_img">
 
                 <img class="vector" id="vector_1" src="./images/vector_1.png" alt="">
                 <img class="vector" id="vector_2" src="./images/vector_2.png" alt="">
@@ -132,5 +154,20 @@
             <p class="footer__info">© 2022 Enver, All Rights Reserved</p>
         </footer>
     </div>
+
+    <script>
+        let openBtn = document.querySelector('.navbar__btn_burger');
+        let closeBtn = document.querySelector('.burger-menu__btn_close');
+        let burgerMenu = document.querySelector('.burger-menu');
+  
+        openBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'block';
+        });
+  
+        closeBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'none';
+        });
+    </script>
+
 </body>
 </html>
